@@ -7,7 +7,7 @@ import images from '~/assets/images';
 import { useEffect, useState } from 'react';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import Accountitem from '../../../Accountitem';
-
+import Button from '~/components/Button';
 const cx = classNames.bind(styles);
 
 function Header() {
@@ -36,7 +36,6 @@ function Header() {
                     <Accountitem/>
                     <Accountitem/>
                     <Accountitem/>
-
                     </PopperWrapper>
                 </div>
                
@@ -50,15 +49,17 @@ function Header() {
 
                     <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
 
-
                     <button className={cx('search-btn')}>
                         <FontAwesomeIcon icon={faMagnifyingGlass} />
                     </button>
                 </div>
             </Tippy>
-            <div className={cx('actions')}></div>
+            <div className={cx('actions')}>
+                <Button text> Upload </Button>
+                <Button primary> Log in </Button>
+
+            </div>
         </div>
     </header>;
 }
-
 export default Header;
