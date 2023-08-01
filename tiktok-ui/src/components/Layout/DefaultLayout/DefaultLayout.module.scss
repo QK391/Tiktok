@@ -5,6 +5,7 @@
 }
 .container{
     width: var(--layout-width-content);
+    padding: 0 var(--layout-width-horizontal-spacer);
     display: flex;
 }
 .content{
