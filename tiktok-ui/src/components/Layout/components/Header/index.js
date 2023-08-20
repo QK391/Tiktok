@@ -25,6 +25,7 @@ import Accountitem from "../../../Accountitem";
 import Button from "~/components/Button";
 import Menu from "~/components/Popper/Menu";
 import 'tippy.js/dist/tippy.css';
+import Image  from "~/components/Image";
 const cx = classNames.bind(styles);
 
 const MENU_ITEMS = [
@@ -151,9 +152,10 @@ function Header() {
           )}
           <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
             {currentUser ? (
-              <img src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/b5e0e38534e78b6840ffa10ccb312b9f~c5_100x100.jpeg?x-expires=1691132400&x-signature=gyzkF5bU1DO0qSHaV5ZZ5uwMw5A%3D"
-                className={cx("user-avatar")}
-                alt="Rose" />
+              <Image src = "https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/b5e0e38534e78b6840ffa10ccb312b9f~c5_100x100.jpeg?x-expires=1691132400&x-signature=gyzkF5bU1DO0qSHaV5ZZ5uwMw5A%3D"
+                className = {cx("user-avatar")}
+                alt = "Rose"
+              />
             ) : (
               <button className={cx("more-btn")}>
                 <FontAwesomeIcon icon={faEllipsisVertical} />
